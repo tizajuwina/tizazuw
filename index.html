@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CV - Tiza Juwina Triandhara</title>
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <style>
+    /* Palet Pink */
+    :root {
+      --pink: #F9C9D8;         
+      --pink-light: #FFE4EC;   
+      --bg: #FFF5F8;         
+      --bg-soft: #FFE9F0;     
+      --accent: #E8789B;      
+      --accent-dark: #C94F78; 
+      --text: #5A2E3E;        
+    }
+
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Segoe UI', Arial, sans-serif; color: var(--text); background-color: var(--bg); }
+
+    .navbar { background-color: var(--pink); box-shadow: 0 2px 10px rgba(201,79,120,.15); }
+    .navbar-brand, .nav-link { color: var(--text); }
+    .nav-link:hover { color: var(--accent-dark); }
+    .navbar-toggler { border-color: rgba(90,46,62,.4); }
+    .navbar-toggler-icon {
+      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%2890,46,62,0.9%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    }
+
+    /* Banner / Hero */
+    .hero {
+      background: linear-gradient(135deg, #FFE4EC 0%, #F9C9D8 55%, #F2A9C0 100%);
+      color: var(--text);
+      padding: 100px 0 80px;
+    }
+    .avatar {
+      width: 180px; height: 180px; border-radius: 50%;
+      background: #fff; color: var(--text);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 4rem; font-weight: 700;
+      border: 6px solid var(--accent);
+      margin: 0 auto;
+      box-shadow: 0 8px 24px rgba(201,79,120,.25);
+      object-fit: cover;
+    }
+
+    .hero h1 { font-weight: 800; }
+
+    section { padding: 70px 0; }
+    .section-title { font-weight: 800; color: var(--text); margin-bottom: 40px; position: relative; }
+    .section-title::after {
+      content: ''; display: block; width: 70px; height: 4px;
+      background: var(--accent); margin-top: 10px; border-radius: 2px;
+    }
+    .bg-soft { background-color: var(--bg-soft); }
+    .card { border: none; border-radius: 14px; background-color: #FFFDFE; box-shadow: 0 4px 16px rgba(201,79,120,.15); }
+    footer { background-color: var(--pink); color: var(--text); padding: 20px 0; }
+
+    /* Override warna Bootstrap */
+    .text-primary { color: var(--accent-dark) !important; }
+    .text-muted { color: #94677a !important; }
+    .btn-warning { background-color: var(--accent); border-color: var(--accent); color: #fff; }
+    .btn-warning:hover { background-color: var(--accent-dark); border-color: var(--accent-dark); color: #fff; }
+    .btn-outline-light { color: var(--text); border-color: var(--text); }
+    .btn-outline-light:hover { background-color: var(--text); border-color: var(--text); color: var(--pink-light); }
+    .btn-primary { background-color: var(--accent); border-color: var(--accent); color: #fff; }
+    .btn-primary:hover { background-color: var(--accent-dark); border-color: var(--accent-dark); }
+    .form-control:focus { border-color: var(--accent); box-shadow: 0 0 0 .25rem rgba(232,120,155,.25); }
+    .progress { background-color: #FBDDE7; }
+    .progress-bar { background-color: var(--accent) !important; }
+    .progress-bar.bg-success { background-color: #EE90AD !important; }
+    .progress-bar.bg-warning { background-color: #F2A9C0 !important; }
+    .progress-bar.bg-info { background-color: var(--accent-dark) !important; }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#beranda">Tiza J. T.</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="menu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#beranda">Beranda</a></li>
+          <li class="nav-item"><a class="nav-link" href="#tentang">Tentang Saya</a></li>
+          <li class="nav-item"><a class="nav-link" href="#pendidikan">Pendidikan</a></li>
+          <li class="nav-item"><a class="nav-link" href="#keahlian">Keahlian</a></li>
+          <li class="nav-item"><a class="nav-link" href="#kontak">Kontak</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- BERANDA / BANNER -->
+  <header id="beranda" class="hero text-center">
+    <div class="container">
+     <img src="foto.jpeg" alt="Foto Tiza Juwina Triandhara" class="avatar mb-4">
+      <h1 class="display-5">Tiza Juwina Triandhara</h1>
+      <p class="lead mb-4">Curriculum Vitae / Profile &bull; 19 Tahun</p>
+      <a href="#tentang" class="btn btn-warning btn-lg me-2">Kenali Saya</a>
+      <a href="#kontak" class="btn btn-outline-light btn-lg">Hubungi Saya</a>
+    </div>
+  </header>
+
+  <!-- TENTANG SAYA -->
+  <section id="tentang">
+    <div class="container">
+      <h2 class="section-title">Tentang Saya</h2>
+      <div class="row g-4">
+        <div class="col-md-6">
+          <div class="card h-100 p-4">
+            <h5 class="fw-bold mb-3">Data Diri</h5>
+            <table class="table table-borderless mb-0">
+              <tr><td class="fw-semibold" style="width:35%">Nama</td><td>: Tiza Juwina Triandhara</td></tr>
+              <tr><td class="fw-semibold">Umur</td><td>: 19 Tahun</td></tr>
+              <tr><td class="fw-semibold">Alamat</td><td>: Jalan Sukarela 2</td></tr>
+              <tr><td class="fw-semibold">Hobi</td><td>: Lari, Mendengarkan Lagu</td></tr>
+            </table>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card h-100 p-4">
+            <h5 class="fw-bold mb-3">Profil Singkat</h5>
+            <p class="mb-0">
+              Halo, saya Tiza Juwina Triandhara, berusia 19 tahun. Saya seorang mahasiswa yang
+              antusias belajar hal baru, khususnya di bidang teknologi dan pengembangan website.
+              Website ini dibuat menggunakan CSS Bootstrap sebagai tugas perkuliahan.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PENDIDIKAN -->
+  <section id="pendidikan" class="bg-soft">
+    <div class="container">
+      <h2 class="section-title">Pendidikan</h2>
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-4">
+          <div class="card p-4 h-100">
+            <i class="bi bi-mortarboard-fill fs-1 text-primary"></i>
+            <h5 class="fw-bold mt-2">Perguruan Tinggi</h5>
+            <p class="mb-1">(Budi Luhur University &amp; Fakultas Teknologi Informasi Program Studi Sistem Informasi)</p>
+            <small class="text-muted">2025 - Sekarang</small>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="card p-4 h-100">
+            <i class="bi bi-book-fill fs-1 text-primary"></i>
+            <h5 class="fw-bold mt-2">SMA</h5>
+            <p class="mb-1">SMA Kartika X-1 Jakarta</p>
+            <small class="text-muted">2023-2025</small>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="card p-4 h-100">
+            <i class="bi bi-backpack-fill fs-1 text-primary"></i>
+            <h5 class="fw-bold mt-2">SMP</h5>
+            <p class="mb-1">SMPN 16 Jakarta</p>
+            <small class="text-muted">2020-2023</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- KEAHLIAN -->
+  <section id="keahlian">
+    <div class="container">
+      <h2 class="section-title">Keahlian</h2>
+      <div class="row g-4">
+        <div class="col-md-6">
+          <div class="mb-3">
+            <div class="d-flex justify-content-between"><span>HTML &amp; CSS</span><span>80%</span></div>
+            <div class="progress"><div class="progress-bar" style="width: 70%"></div></div>
+          </div>
+          <div class="mb-3">
+            <div class="d-flex justify-content-between"><span>Bootstrap</span><span>75%</span></div>
+            <div class="progress"><div class="progress-bar bg-success" style="width:70%"></div></div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="mb-3">
+            <div class="d-flex justify-content-between"><span>Microsoft Office</span><span>85%</span></div>
+            <div class="progress"><div class="progress-bar bg-warning" style="width:85%"></div></div>
+          </div>
+          <div class="mb-3">
+            <div class="d-flex justify-content-between"><span>Komunikasi &amp; Kerja Tim</span><span>90%</span></div>
+            <div class="progress"><div class="progress-bar bg-info" style="width:90%"></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- KONTAK -->
+  <section id="kontak" class="bg-soft">
+    <div class="container">
+      <h2 class="section-title">Kontak</h2>
+      <div class="row g-4">
+        <div class="col-md-5">
+          <div class="card p-4 h-100">
+            <p><i class="bi bi-envelope-fill text-primary me-2"></i>tizajuwina30@gmail.com</p>
+            <p><i class="bi bi-telephone-fill text-primary me-2"></i>0813-8175-3726</p>
+            <p><i class="bi bi-instagram text-primary me-2"></i>@tizaajuuuw </p>
+            <p class="mb-0"><i class="bi bi-geo-alt-fill text-primary me-2"></i>Indonesia</p>
+          </div>
+        </div>
+        <div class="col-md-7">
+          <div class="card p-4">
+            <form onsubmit="event.preventDefault(); alert('Terima kasih, pesan kamu terkirim!'); this.reset();">
+              <div class="mb-3">
+                <label class="form-label">Nama</label>
+                <input type="text" class="form-control" required>
+              </div>
+              <div class="mb-3">
+                <label class="form-label">Email</label>
+                <input type="email" class="form-control" required>
+              </div>
+              <div class="mb-3">
+                <label class="form-label">Pesan</label>
+                <textarea class="form-control" rows="4" required></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary">Kirim Pesan</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="text-center">
+    <div class="container">
+      <small>&copy; 2026 Tiza Juwina Triandhara. Dibuat dengan Bootstrap.</small>
+    </div>
+  </footer>
+
+  <!-- Bootstrap 5 JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
